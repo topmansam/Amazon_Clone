@@ -11,12 +11,18 @@ function Home() {
         alt = ""
         />
          <div className= "home__row">
+         <Product title = "The lean startup" price = {29.99} image ="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg" rating ={5}/>
+        
             </div>
-                <Product />
+                
             <div className= "home__row">
+            <Product id = "12113" title = "Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater DOugh Hook and Whisk 5 Litre Glass Bowl"
+            price = {239.0} rating = {4} image ="https://images-na.ssl-images-amazon.com/images/I/810%2BGNdkzKL._AC_SX450_.jpg"/>
+          
             </div>
 
             <div className= "home__row">
+          
             </div>
       </div>
     </div>
