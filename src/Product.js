@@ -8,7 +8,7 @@ function Product({id,title, image, price, rating}) {
         <p> {title}</p>
         <p className= "product__price">
             <small>$</small>
-            <strong> {price}</strong>
+            <strong>{price}</strong>
         </p>
         <div className="product__rating">
             {Array(rating)
