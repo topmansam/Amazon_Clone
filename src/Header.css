@@ -11,6 +11,7 @@
     object-fit: contain;
     margin: 0 20px;
     margin-top: 18px;
+    background-color: white;
 }
 .header__search{
     display: flex;
