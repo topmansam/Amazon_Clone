@@ -4,7 +4,8 @@ import Header from './Header';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./Checkout";
-import { StateProvider, initialState, reducer } from './StateProvider';
+import { initialState, reducer } from './reducer';
+import { StateProvider } from './StateProvider'; // <-- Make sure you've added this import
 
 function App() {
     return (
