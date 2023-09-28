@@ -5,6 +5,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
+import Payment from './Payment'; 
 import { initialState, reducer } from './reducer';
 import { StateProvider } from './StateProvider';
 import { getAuth } from 'firebase/auth';
@@ -16,6 +17,7 @@ function Layout() {
             <Header />
             <Routes>
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/payment" element={<Payment />} />
                 <Route path="/" element={<Home />} />
             </Routes>
         </div>
