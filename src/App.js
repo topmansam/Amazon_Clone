@@ -10,16 +10,25 @@ import { initialState, reducer } from './reducer';
 import { StateProvider } from './StateProvider';
 import { getAuth } from 'firebase/auth';
 import { useStateValue } from "./StateProvider";
+import {loadStripe} from "@stripe/stripe-js"
+import { Elements } from "@stripe/react-stripe-js";
  
+const promise = loadStripe(
+    "pk_test_51NvAduH6RdLXRMYiLJ2eeKh1FQy3luXZeY4H45d72JJtdaiM1tkTQpGk5Rztw7VL5FA0ScGVZEWs2fIaT7LTy1NF00jh1fkFgn"
+)
 function Layout() {
     return (
         <div>
             <Header />
             <Routes>
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/payment" element={<Payment />} />
-                <Route path="/" element={<Home />} />
-            </Routes>
+    <Route path="/checkout" element={<Checkout />} />
+    <Route path="/payment" element={
+        <Elements stripe={promise}> 
+            <Payment/>
+        </Elements>
+    }/>
+    <Route path="/" element={<Home />} />
+</Routes>
         </div>
     );
 }
